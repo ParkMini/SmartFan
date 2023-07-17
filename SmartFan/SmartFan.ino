@@ -23,8 +23,6 @@ void setup()
 
 void loop()
 {
-  delay(1000);
-  // put your main code here, to run repeatedly:
   int SPEED_BTN_VALUE = digitalRead(SPEED_BTN);
   int EMERGENCY_BTN_VALUE = digitalRead(EMERGENCY_BTN);
   if (SPEED_BTN_VALUE == LOW && EMERGENCY_STOP == 0) {
@@ -41,6 +39,7 @@ void loop()
       analogWrite(PWM_PIN, 0);
       SPEED = 0;
     }
+    delay(100);
   }
 
   if (EMERGENCY_BTN_VALUE == LOW) {
@@ -53,5 +52,6 @@ void loop()
       EMERGENCY_STOP = 0;
       analogWrite(EMERGENCY_LED, 0);
     }
+    delay(100);
   }
 }
