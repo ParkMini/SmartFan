@@ -43,7 +43,7 @@ void loop()
       analogWrite(PWM_PIN, 0);
       SPEED = 0;
     }
-    delay(500);
+    delay(100);
   }
 
   // 긴급 정지
@@ -57,6 +57,6 @@ void loop()
       EMERGENCY_STOP = 0;
       analogWrite(EMERGENCY_LED, 0);
     }
-    delay(500);
+    delay(100);
   }
 }
